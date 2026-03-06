@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Albums</title>
+    </head>
+    <body>
+        <h1>Albums</h1>
+
+        {% for album in albums %}
+        <article>
+            <h2>{{album.album_name}}</h2>
+            <p>Released: {{album.release_year}}</p>
+        </article>
+        {% endfor %}
+    </body>
+</html>

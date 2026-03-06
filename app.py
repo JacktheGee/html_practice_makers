@@ -44,7 +44,7 @@ def get_single_album(album_id):
 
     album = repository.find(album_id)
 
-    return album.album_name
+    return render_template("albums/show.html", album=album)
 
 @app.route('/albums', methods=['POST'])
 def add_album():
@@ -68,8 +68,7 @@ def get_albums():
 
     albums = repository.all()
 
-    return render_template("albums.html", albums=albums)
-    # return ", ".join([album.album_name for album in albums])
+    return render_template("albums/index.html", albums=albums)
 
 # == Example Code Below ==
 
